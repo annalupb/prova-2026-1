@@ -1,18 +1,16 @@
-# Dados de processo industrial
+# Como fazer a programação com Python
 
-O arquivo `data/process.csv` tem dados medidos numa usina.
+## Experimente com o Jupyter Notebook
 
-O objetivo é fazer uma análise exploratória de dados (EDA) para entender o processo.
+1. Abra o arquivo `src/playground.ipynb`. Instale as extensões do Jupyter Notebook no VS Code, se ainda não tiver feito isso.
+2. Selecione o kernel Python do ambiente virtual criado para este projeto.
+3. Execute as células do notebook para ver os resultados. Você pode modificar o código e adicionar novas células para experimentar com os dados.
 
-1. Crie um histograma para cada uma das colunas numéricas.
-2. Calcule a média ($\mu$, `.mean()`) e o desvio padrão ($\sigma$, `.std()`), e os valores mínimo e máximo para cada uma das colunas numéricas.
-3. Calcule a temperatura média do reator (`reactor_temp`) no regime de operação `A` (_normal_) e em `B` (_stressed_). Utilize uma operação `for` com `match`-`case`. Tem diferença?
+## Crie um script Python
 
-> A "correlação de Pearson" entre dois grupos de dados é um número entre -1 e 1 que define se esses dados estão linealmente relacionados. Por exemplo: uma correlação de 1 entre a temperatura e a pressão indica que si a pressão aumenta duas vezes, a temperatura aumenta duas vezes também. Se a correlação é negativa, quer dizer que o aumento de uma quantidade implica a diminuição da outra. Uma correlação de zero indica que a mudança de um valor não tem efeito no outro.
+1. No arquivo `src/main.py`, escreva um script Python que resolva os problemas propostos no arquivo `docs/report.pdf`. Você pode usar bibliotecas como `pandas`, `numpy` e `matplotlib` para análise de dados e visualização.
+2. Salve o script e execute-o com o comando no terminal:
 
-4. Calcule a correlação entre:
-
-- `reactor_temp` e `reactor_pressure`
-- `feed_flow_rate` e `power_consumption_kw`
-- Duas mais da sua escolha
-
+```bash
+uv run python src/main.py
+```

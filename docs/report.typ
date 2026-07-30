@@ -47,79 +47,95 @@
   #align(center)[
     #set par(justify: false)
     *Resumo* \
-    #lorem(80)
+
+    Escreva um resumo do relatório, destacando os principais pontos abordados e os resultados obtidos. O resumo deve ser conciso e informativo, fornecendo uma visão geral do conteúdo do relatório.
   ]
 ]
 
-== Introdução
+= Introdução
 
-Este relatório apresenta uma análise detalhada dos dados coletados do reator, incluindo visualizações gráficas, estatísticas descritivas e interpretações dos resultados.
+Este relatório apresenta uma análise de alguns dados coletados do reator, incluindo visualizações gráficas, estatísticas descritivas e interpretações dos resultados.
 
-== Soluções
+= Soluções aos problemas
 
-=== Questão 1
+Nas seções a seguir, apresentamos as soluções para os problemas propostos.
+
+== Problema 1
 
 #quote()[
-  Crie um histograma para cada uma das colunas numéricas.
+  Crie um histograma da temperatura do reator (coluna `reactor_temp`) para a condição de operação `A` (normal). O gráfico deve ter os eixos rotulados e um título apropriado.
 ]
 
-A figura da coluna de temperatura do reator está em @reactor_temp.
+O histograma da temperatura do reator está na @reactor_temp_histogram.
 
 #figure(
-  image("../images/results/reactor_temp.png", width: 100%),
+  image("../images/results/example_histogram.png", width: 100%),
   placement: auto,
   caption: [
-    Uma imagem de exemplo.
+    Histograma da temperatura do reator (gráfico de exemplo, não representa os dados solicitados, lembre-se de substituir o nome da imagem pelo nome do arquivo que você gerou).
   ],
-) <reactor_temp>
+) <reactor_temp_histogram>
 
-=== Questão 2
+=== Comentário
+
+Escriva um comentário sobre o histograma, destacando quaisquer padrões ou anomalias observadas.
+
+== Problema 2
 
 #quote()[
-  Calcule a média ($mu$, `.mean()`) e o desvio padrão ($sigma$, `.std()`), e os valores mínimo e máximo para cada uma das colunas numéricas.
+  Calcule a média $mu$ e o desvio padrão $sigma$ para as colunas numéricas `vibration_rms`, `motor_current` e `power_consumption_kw`. Apresente os resultados em uma tabela, com as colunas representando as estatísticas calculadas e as linhas representando cada variável numérica analisada, por exemplo:
+
+  #table(
+    columns: 3,
+    align: (left, center, center),
+    [*Variável*], [$mu$], [$sigma$],
+    [vibration_rms], [valor], [valor],
+    [motor_current], [valor], [valor],
+    [power_consumption_kw], [valor], [valor],
+  )
 ]
 
-Os resultados estão em @resultados.
+Os resultados estão na @resultados.
 
 #figure(
   placement: auto,
   caption: [
-    Uma imagem de exemplo.
+    Coloque aqui uma descrição da tabela de resultados.
   ],
   table(
-    columns: 2,
-    [*Quantidade*], [*Ingrediente*],
-    [360g], [Farinha para panificação],
-    [250g], [Manteiga (temperatura ambiente)],
-    [150g], [Açúcar mascavo],
-    [100g], [Açúcar de cana],
-    [100g], [Chocolate 70% cacau],
-    [100g], [Chocolate 35-40% cacau],
-    [2], [Ovos],
-    [Pitada], [Sal],
-    [Fio], [Extrato de baunilha],
+    columns: 3,
+    align: (left, center, center),
+    [*Variável*], [$mu$], [$sigma$],
+    [vibration_rms], [valor], [valor],
+    [motor_current], [valor], [valor],
+    [power_consumption_kw], [valor], [valor],
     table.hline(),
   ),
 ) <resultados>
 
-=== Questão 3
+=== Comentário
+
+Escreva um comentário sobre os resultados obtidos, destacando quaisquer padrões ou insights relevantes.
+
+== Problema 3
 
 #quote()[
-  Calcule a média ($mu$, `.mean()`) e o desvio padrão ($sigma$, `.std()`), e os valores mínimo e máximo para cada uma das colunas numéricas.
+  Mostre a evolução da pressão do reator (`reactor_pressure`) ao longo do tempo entre as datas (_timestamps_) `2024-02-16 08:00:00` e `2024-02-16 09:00:00`, utilizando um gráfico de linha. O eixo $x$ deve representar o tempo e o eixo $y$ a pressão do reator. Adicione um título e rótulos aos eixos.
 ]
 
-A fórmula utilizada para calcular a soma dos primeiros n números inteiros é:
+O gráfico da pressão do reator está na @reactor_pressure_plot.
 
-$
-  sum_(k=0)^n k & = 1 + ... + n \
-                & = (n(n+1)) / 2
-$
+#figure(
+  image("../images/results/example_plot.png", width: 100%),
+  placement: auto,
+  caption: [
+    Evolução da pressão do reator ao longo do tempo (gráfico de exemplo, não representa os dados de pressão).
+  ],
+) <reactor_pressure_plot>
 
-=== Questão 4
+=== Comentário
 
-#quote()[
-  Calcule a média ($mu$, `.mean()`) e o desvio padrão ($sigma$, `.std()`), e os valores mínimo e máximo para cada uma das colunas numéricas.
-]
+Indique a interpretação do gráfico, destacando quaisquer tendências ou variações significativas na pressão do reator ao longo do tempo.
 
 == Conclusão
 
