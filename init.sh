@@ -19,11 +19,14 @@ echo "[4/5] Creating the virtual environment with uv..."
 
 uv sync
 
-echo "[5/5] Installing VS Code command line interface and recommended extensions..."
+echo "[5/5] Installing recommended VS Code extensions (if CLI is available)..."
 
-brew install --cask visual-studio-code
-code --install-extension ms-python.python
-code --install-extension myriad-dreamin.tinymist
-code --install-extension tomoki1207.pdf
+if command -v code >/dev/null 2>&1; then
+	code --install-extension ms-python.python
+	code --install-extension myriad-dreamin.tinymist
+	code --install-extension mathematic.vscode-pdf
+else
+	echo "VS Code CLI ('code') not found. Skipping extension installation."
+fi
 
-echo "Setup complete."
+echo "Setup complete. Bora programar!"

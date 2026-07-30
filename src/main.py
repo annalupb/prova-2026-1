@@ -13,7 +13,3 @@ print("Solucionando o problema 2...")
 # 3.
 
 print("Solucionando o problema 3...")
-
-# 4.
-
-print("Solucionando o problema 4...")
