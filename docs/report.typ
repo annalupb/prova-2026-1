@@ -33,11 +33,12 @@
   clearance: 2em,
 )[
   #align(center)[
-    *Universidad Federal da Paraíba* \
-    Engenharia Química \
+    *Universidade Federal da Paraíba* \
+    Centro de Informática \
+    Departamento de Computação Científica \
     Iniciação à Computação 2026.1 \
     Professora Elizabet Medeiros \
-    *Prova Final*
+    *Avaliação*
     #title() \
     Nome do aluno
   ]
@@ -59,6 +60,18 @@ Este relatório apresenta uma análise de alguns dados coletados do reator, incl
 = Soluções aos problemas
 
 Nas seções a seguir, apresentamos as soluções para os problemas propostos.
+
+#divider()
+
+Coloque aqui o endereço do repositório do GitHub onde o código-fonte do projeto está hospedado na sua conta pessoal. Certifique-se de que o repositório esteja público e acessível para que os avaliadores possam revisar o código.
+
+#strong[
+  #link("https://github.com/improbabilidades/prova-2026-1")[improbabilidades/prova-2026-1]
+]
+
+// Modifique o link e o texto acima para apontar para o seu repositório pessoal.
+
+#divider()
 
 == Problema 1
 
