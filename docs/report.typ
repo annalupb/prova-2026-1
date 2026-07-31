@@ -40,7 +40,7 @@
     Professora Elizabet Medeiros \
     *Avaliação*
     #title() \
-    Nome do aluno
+    Anna Luiza Pereira Barbosa
   ]
 
   #v(20pt)
@@ -82,7 +82,7 @@ Coloque aqui o endereço do repositório do GitHub onde o código-fonte do proje
 O histograma da temperatura do reator está na @reactor_temp_histogram.
 
 #figure(
-  image("../images/results/example_histogram.png", width: 100%),
+  image("../images/results/hist_reactor_temp_A.png", width: 100%),
   placement: auto,
   caption: [
     Histograma da temperatura do reator (gráfico de exemplo, não representa os dados solicitados, lembre-se de substituir o nome da imagem pelo nome do arquivo que você gerou).
@@ -113,15 +113,15 @@ Os resultados estão na @resultados.
 #figure(
   placement: auto,
   caption: [
-    Coloque aqui uma descrição da tabela de resultados.
+    Tabela com média ($\mu$) e desvio padrão ($\sigma$) das variáveis selecionadas.
   ],
   table(
     columns: 3,
     align: (left, center, center),
-    [*Variável*], [$mu$], [$sigma$],
-    [vibration_rms], [valor], [valor],
-    [motor_current], [valor], [valor],
-    [power_consumption_kw], [valor], [valor],
+    [*Variável*], [$\mu$], [$\sigma$],
+    [vibration_rms], [1.513], [0.140],
+    [motor_current], [46.033], [0.593],
+    [power_consumption_kw], [41.400], [0.444],
     table.hline(),
   ),
 ) <resultados>
@@ -139,7 +139,7 @@ Escreva um comentário sobre os resultados obtidos, destacando quaisquer padrõe
 O gráfico da pressão do reator está na @reactor_pressure_plot.
 
 #figure(
-  image("../images/results/example_plot.png", width: 100%),
+  image("../images/results/pressure_2024-02-16_08-09.png", width: 100%),
   placement: auto,
   caption: [
     Evolução da pressão do reator ao longo do tempo (gráfico de exemplo, não representa os dados de pressão).
