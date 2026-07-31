@@ -26,7 +26,7 @@
 #set quote(block: true, quotes: false)
 #set text(lang: "pt")
 
-#place(
+      O histograma mostra que a temperatura do reator está concentrada em torno de 181.435 °C, com desvio padrão aproximado de 1.098 °C. A distribuição é relativamente estreita, indicando pequena variabilidade na temperatura operacional na condição `A`. Não há picos extremos visíveis, o que sugere operação estável nesse período.
   top + center,
   float: true,
   scope: "parent",
@@ -62,7 +62,13 @@ Este relatório apresenta uma análise de alguns dados coletados do reator, incl
 Nas seções a seguir, apresentamos as soluções para os problemas propostos.
 
 #divider()
+      As estatísticas calculadas indicam:
 
+      - `vibration_rms`: média ≈ 1.513, desvio ≈ 0.140 — baixa variabilidade relativa à média.
+      - `motor_current`: média ≈ 46.033 A, desvio ≈ 0.593 A — corrente do motor está estável com pequena flutuação.
+      - `power_consumption_kw`: média ≈ 41.400 kW, desvio ≈ 0.444 kW — consumo de potência consistente.
+
+      Em resumo, as variáveis analisadas apresentam médias estáveis e desvios pequenos, indicando operação regular dos componentes monitorados.
 Coloque aqui o endereço do repositório do GitHub onde o código-fonte do projeto está hospedado na sua conta pessoal. Certifique-se de que o repositório esteja público e acessível para que os avaliadores possam revisar o código.
 
 #strong[
@@ -81,7 +87,7 @@ Coloque aqui o endereço do repositório do GitHub onde o código-fonte do proje
 
 O histograma da temperatura do reator está na @reactor_temp_histogram.
 
-#figure(
+      No intervalo entre `2024-02-16 08:00:00` e `2024-02-16 09:00:00` foram observadas 174 medições de pressão; a pressão variou entre 15.404 e 15.969 (média ≈ 15.673, desvio padrão ≈ 0.105). A série mostra um leve aumento entre o primeiro valor (15.624) e o último (15.890), cerca de 0.266 unidades, mas a variabilidade geral é pequena (std ≈ 0.105), sugerindo flutuações moderadas sem eventos abruptos.
   image("../images/results/hist_reactor_temp_A.png", width: 100%),
   placement: auto,
   caption: [
