@@ -18,7 +18,8 @@ df = pd.read_csv(
 print(df.head())
 # Preenchimento de NaN: numéricos -> mediana; categóricos -> moda
 num_cols = df.select_dtypes(include=["number"]).columns
-cat_cols = df.select_dtypes(include=["object"]).columns
+# selecionar colunas de texto/string explicitamente (evita Pandas4Warning)
+cat_cols = df.select_dtypes(include=["object", "string"]).columns
 
 # Preencher numéricos com mediana
 df[num_cols] = df[num_cols].fillna(df[num_cols].median())
@@ -28,11 +29,11 @@ for c in cat_cols:
     try:
         mode = df[c].mode()
         if not mode.empty:
-            df[c].fillna(mode.iloc[0], inplace=True)
+            df[c] = df[c].fillna(mode.iloc[0])
         else:
-            df[c].fillna("", inplace=True)
+            df[c] = df[c].fillna("")
     except Exception:
-        df[c].fillna("", inplace=True)
+        df[c] = df[c].fillna("")
 
 print('\nApós preenchimento:')
 print(df.head())
